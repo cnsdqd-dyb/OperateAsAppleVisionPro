@@ -1,8 +1,28 @@
 # Move Like AppleVisionPro
 
+![Alt Text](demo.gif)
+
 ## 项目概述
 
 本项目是一个基于眼动追踪和手势识别的交互系统，旨在通过用户的眼动和手势来控制虚拟鼠标和屏幕操作。项目使用了MediaPipe框架进行人脸和手势识别，结合深度学习模型和随机森林模型来实现精确的眼动追踪。
+
+## 快速启动
+
+  下载本项目
+  创建并激活一个虚拟环境
+```commad
+conda create -n your_env_name
+conda activate your_env_name
+```
+  下载所需
+```commad
+cd .\OperateAsAppleVisionPro
+pip install -r requirements.txt
+```
+  启动
+```commad
+python interact.py
+``` 
 
 ## 主要组件
 
