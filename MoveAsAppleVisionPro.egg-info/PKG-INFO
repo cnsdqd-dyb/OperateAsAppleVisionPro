@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: MoveAsAppleVisionPro
+Version: 0.1
+Summary: A project to move the mouse as Apple Vision Pro
+Home-page: https://github.com/cnsdqd-dyb/operate_as_apple_vision_pro
+Author: Yubo Dong
+Author-email: 22321287@zju.edu.cn
+Description-Content-Type: text/markdown
+
+# Move Like AppleVisionPro
+
+## 项目概述
+
+本项目是一个基于眼动追踪和手势识别的交互系统，旨在通过用户的眼动和手势来控制虚拟鼠标和屏幕操作。项目使用了MediaPipe框架进行人脸和手势识别，结合深度学习模型和随机森林模型来实现精确的眼动追踪。
+
+## 主要组件
+
+1. **EyeTrackerFunction**: 包含多种眼动追踪方法，包括基于深度学习的DL眼动追踪、基于随机森林的RF眼动追踪和基于预先训练参数的ARGS眼动追踪。
+
+2. **HandTrackerFunction**: 使用MediaPipe的Hands解决方案来识别和追踪手部动作，支持多种手势识别。
+
+3. **ControlEvent**: 定义了控制事件类型，如移动到指定位置、相对移动、左键点击、调整大小和手势。
+
+4. **TrackerListener**: 监听器类，负责处理摄像头捕获的图像，调用追踪器函数，并根据追踪结果生成控制事件。
+
+5. **LoggerGUI**: 日志GUI类，用于在屏幕上显示日志信息。
+
+6. **StoppableThread**: 可停止的线程类，用于执行长时间运行的任务。
+
+7. **get_data_motion.py**: 用于收集眼动追踪数据的脚本，包括用户引导和数据保存。
+
+8. **train.py**: 用于训练眼动追踪模型的脚本。
+
+## 使用方法
+
+1. **安装依赖**: 确保安装了所有必要的Python库，如`mediapipe`, `numpy`, `opencv-python`, `pyautogui`, `torch`等。
+
+2. **配置文件**: 在项目根目录下创建一个名为`config.json`的配置文件，用于设置项目参数。
+
+3. **启动监听器**: 运行`TrackerListener`类，它将打开摄像头并开始监听眼动和手势。
+
+4. **交互操作**: 用户通过眼动和手势与系统交互，系统将根据追踪结果执行相应的控制事件。
+
+## 注意事项
+
+- 在使用眼动追踪功能之前，建议进行校准以提高追踪精度。
+- 确保摄像头清晰可见，避免强光或阴影影响追踪效果。
+- 项目中的模型和参数可能需要根据个人情况进行调整。
+
+## 贡献者
+
+- **开发者**: [Yubo Dong]
+
+## 许可证
+
+本项目遵循 [MIT License](LICENSE)。

@@ -1,0 +1,2 @@
+[console_scripts]
+move-as-apple-vision-pro = move_as_apple_vision_pro.main:main

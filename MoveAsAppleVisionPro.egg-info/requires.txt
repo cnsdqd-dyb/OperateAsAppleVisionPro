@@ -1,0 +1,10 @@
+numpy
+opencv-python
+mediapipe
+torch
+screeninfo
+matplotlib
+joblib
+pyautogui
+scikit-learn
+scipy
